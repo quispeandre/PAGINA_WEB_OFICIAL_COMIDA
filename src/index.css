@@ -93,3 +93,31 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #f59e0b;
 }
+@media (max-width: 767px) {
+  .mobile-padding {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+  
+  .mobile-z-index {
+    z-index: 10 !important;
+    position: relative;
+    margin-top: -2rem;
+  }
+  
+  .aspect-w-16 {
+    padding-bottom: 75% !important;
+  }
+  
+  .animate-float {
+    animation: none !important;
+  }
+}
+
+.relative.z-30 {
+  z-index: 30;
+}
+
+.mobile-z-index {
+  z-index: 20;
+}

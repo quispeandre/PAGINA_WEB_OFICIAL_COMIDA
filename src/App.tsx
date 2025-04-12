@@ -266,34 +266,39 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center z-0 parallax"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?auto=format&fit=crop&w=2000&q=80')",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/60"></div>
-        </div>
-        
-        <div className="relative z-10 text-center px-4 animate-float">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 opacity-0 animate-[slide-up_1s_ease-out_0.3s_forwards]">
-            Saborea lo
-            <span className="text-yellow-400 animate-pulse-glow"> Extraordinario</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-0 animate-[slide-up_1s_ease-out_0.6s_forwards]">
-            Experimenta nuestras legendarias hamburguesas y pollo, elaborados con pasión y servidos con estilo
-          </p>
-          <a
-            href="#menu"
-            className="inline-flex items-center bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-110 opacity-0 animate-[slide-up_1s_ease-out_0.9s_forwards] animate-pulse-glow"
+        <section id="home" className="relative flex items-center justify-center overflow-hidden min-h-screen">
+          <div
+            className="absolute inset-0 bg-cover bg-center z-0 parallax"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?auto=format&fit=crop&w=2000&q=80')",
+            }}
           >
-            Ver Menú <ChevronRight className="ml-2" />
-          </a>
-        </div>
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
 
-        {/* Special Features */}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent py-12">
+          <div className="relative z-30 pt-16 pb-8 px-4 text-center md:pt-32 mobile-padding">
+            <h1 className="text-4xl md:text-7xl font-bold mb-6 opacity-0 animate-[slide-up_1s_ease-out_0.3s_forwards]">
+              Saborea lo
+              <span className="text-yellow-400 block md:inline mt-2 md:mt-0 animate-pulse-glow">
+                Extraordinario
+              </span>
+            </h1>
+
+            <p className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto opacity-0 animate-[slide-up_1s_ease-out_0.6s_forwards]">
+              Experimenta nuestras legendarias hamburguesas y pollo, elaborados con pasión y servidos con estilo
+            </p>
+
+            <a
+              href="#menu"
+              className="inline-flex items-center bg-yellow-400 text-black px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-110 opacity-0 animate-[slide-up_1s_ease-out_0.9s_forwards]"
+            >
+              Ver Menú <ChevronRight className="ml-2" />
+            </a>
+          </div>
+        </section>
+
+        {/* Sección de características especiales */}
+        <section className="bg-gradient-to-t from-black to-transparent py-12 mt-32">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {specialFeatures.map((feature, index) => (
@@ -311,8 +316,10 @@ function App() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+
+
 
       {/* Menu Section */}
       <section id="menu" className="py-20 px-4" ref={menuRef}>
